@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Footer from './Components/Footer'
 
 import ProductScreen from './Screens/ProductScreen';
-import { Container } from 'react-bootstrap';
+
 import LoginScreen from "./Screens/LoginScreen"
 import HomeScreen from './Screens/HomeScreen'
 import CartScreen from './Screens/CartScreen'
@@ -30,8 +30,8 @@ function App() {
     <BrowserRouter>
 <Header/>
    
-   <Container>
-        <main className="py-3">
+  
+        <main>
         <Route path='/order/:id' component={OrderScreen} />
         <Route path='/shipping' component={ShippingScreen} />
         <Route path='/payment' component={PaymentScreen} />
@@ -65,7 +65,7 @@ function App() {
           />
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        </Container>
+     
       <Footer/>
     
   
