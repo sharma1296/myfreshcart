@@ -63,7 +63,7 @@ function App() {
             component={HomeScreen}
             exact
           />
-          <Route path="/" component={HomeScreen} exact></Route>
+          <Route path="/"exact component={HomeScreen}></Route>
         </main>
      
       <Footer/>
