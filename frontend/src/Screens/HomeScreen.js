@@ -26,7 +26,8 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <Meta />
+         <Meta />
+      {!keyword ? (
 
       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
   <ol className="carousel-indicators">
@@ -52,12 +53,13 @@ const HomeScreen = ({ match }) => {
     <span className="sr-only">Next</span>
   </a>
 </div>
-   
+  ) :(
       
+   <Link to='/' className='btn btn-light'>
+   Go Back
+ </Link>
+  )}
  
-        <Link to='/' className='btn btn-light'>
-          Go Back
-        </Link>
     
       <h1>Latest Products</h1>
       {loading ? (
