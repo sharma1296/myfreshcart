@@ -18,9 +18,10 @@ import {
   PRODUCT_CREATE_REVIEW_REQUEST,
   PRODUCT_CREATE_REVIEW_SUCCESS,
   PRODUCT_CREATE_REVIEW_FAIL,
-  PRODUCT_TOP_REQUEST,
-  PRODUCT_TOP_SUCCESS,
   PRODUCT_TOP_FAIL,
+  PRODUCT_TOP_SUCCESS,
+  PRODUCT_TOP_REQUEST,
+
 } from "../constants/productConstants"
 
 
@@ -231,3 +232,4 @@ export const listTopProducts = () => async (dispatch) => {
     })
   }
 }
+

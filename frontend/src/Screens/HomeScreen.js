@@ -1,16 +1,23 @@
-import React, { useEffect } from 'react'
+import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import {  useSelector ,useDispatch} from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../Components/Product'
 import Message from '../Components/Message'
 import Loader from '../Components/Loader'
 import Paginate from '../Components/Paginate'
-
+import ProductCarousel from '../Components/ProductCarousel'
 import Meta from '../Components/Meta'
 import { listProducts } from '../actions/productActions'
 
+
+
+import HomeCarousel from '../Components/HomeCarousel'
+
 const HomeScreen = ({ match }) => {
+  
+
+
   const keyword = match.params.keyword
 
   const pageNumber = match.params.pageNumber || 1
@@ -26,40 +33,26 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-         <Meta />
+       
+       <Meta />
       {!keyword ? (
-
-      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-  <ol className="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-  
-  </ol>
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img className="d-block w-100" src="../Images/slider2.png" alt="First slide"/>
-    </div>
-    <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Second slide"/>
-    </div>
-   
-  </div>
-  <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="sr-only">Previous</span>
-  </a>
-  <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="sr-only">Next</span>
-  </a>
-</div>
-  ) :(
-      
-   <Link to='/' className='btn btn-light'>
-   Go Back
- </Link>
-  )}
- 
+        <ProductCarousel />
+      ) : (
+        <Link to='/' className='btn btn-light'>
+          Go Back
+        </Link>
+      )}
+  <HomeCarousel/>
+   <div class="img-banner">
+          <div class="wrap-img">
+            <a href='end'><img src="../Images/two-banner-1.jpg" alt=""/></a>
+            <div class="effect"></div>
+          </div>
+          <div class="wrap-img">
+            <a href="end"><img src="../Images/fogg-banner.png" alt=""/></a>
+            <div class="effect"></div>
+          </div>
+        </div>
     
       <h1>Latest Products</h1>
       {loading ? (
@@ -80,6 +73,7 @@ const HomeScreen = ({ match }) => {
             page={page}
             keyword={keyword ? keyword : ''}
           />
+      
         </>
       )}
     </>

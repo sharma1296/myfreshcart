@@ -1,6 +1,9 @@
 import React from 'react'
 
+
 function Footer() {
+
+
   return (
     <>
         <footer>
@@ -23,9 +26,17 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div id="multi-item-example" className="carousel slide carousel-multi-item" data-ride="carousel">
+              <div class="controls-top">
+        <a className="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a className="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
         <div className="main-footer container">
             <div className="slide-footer">
               <div className="owl-carousel owl-theme row">
+      
                 <div className="item col-3"><div className="content">
                   <div className="wrap-content">
                     <div className="icon"><img src="../Images/befunky_layer1.png" alt=""/></div>
@@ -67,8 +78,17 @@ function Footer() {
                     </ul>
                   </div>
                 </div></div>
+     </div>
+    
+    
+
               </div>
             </div>
+            </div>
+            </div>
+          
+          </div>
+            
             <div className="bottom-main row">
               <div className="col-lg-3">
                 <div className="footer-logo">
@@ -130,7 +150,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-        </div>
+        
         <div className="bottom-footer container">
           <div className="row">
             <div className="left col-lg-12 text-center">

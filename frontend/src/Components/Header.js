@@ -24,10 +24,10 @@ function menu_hidden_left_zoom_out(){
   categories.classList.toggle('zoom-out');
 }
 
-function settings_zoom_out(){
+/*function settings_zoom_out(){
   var setting = document.querySelector('.menu-hidden-left .wrap-setting .father-setting');
   setting.classList.toggle('zoom-out');
-}
+}*/
 function drop_list_categories(){
   var list_categories = document.querySelector('.wrap-list-categories');
   list_categories.classList.toggle('hidden');
@@ -98,40 +98,12 @@ var cart_mobile = document.getElementById('a14235');
                         <a href="end"><li>Herbs</li></a>
                         <a href="end"><li>Cola cola</li></a>
                         <a href="end"><li>Mustard Oils</li></a>
-                        <a href="end"><li>Beverages</li></a>
-                        <a href="end"><li>Seeds & Nuts</li></a>
-                        <a href="end"><li>Toned Milk</li></a>
-                        <a href="end"><li>Cheese</li></a>
-                        <a href="end"><li>Toned Milk</li></a>
-                        <a href="end"><li>Chicken</li></a>
-                        <a href="end"><li>Meat</li></a>
+                    
                       </ul>
                     </div>
                   </div>
 
-                  <div className="wrap-setting">
-                    <div className="father-setting zoom-out">
-                      <div className="setting">
-                        <div onClick={settings_zoom_out} className="title"><i className="fas fa-cog"></i>Settings</div>
-                        <div className="select">
-                          <select name="carlist" form="carform">
-                            <option value="volvo">English</option>
-                            <option value="saab">Deutsch</option>
-                            <option value="opel">Français</option>
-                            <option value="audi">Español</option>
-                            <option value="audi">Italiano</option>
-                          </select>
-                          <select name="carlist" form="carform">
-                            <option value="volvo">USD $</option>
-                            <option value="saab">EUR €</option>
-                          </select>
-                          <select name="carlist" form="carform">
-                            <option value="volvo">Wishlist (0)</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+             
                 
                 </div>
                 <div onClick={menu_hidden_left_hidden} className="background-black hidden-back-ground-black"></div>
@@ -151,7 +123,7 @@ var cart_mobile = document.getElementById('a14235');
           <div className="between-menu container-fluid">
             <div className="container">
               <div className="row">
-                <div className="left col-3 d-none d-lg-block"><a href="end"><img src="../Images/review.png" alt=""/></a></div>
+                <div className="left col-3 d-none d-lg-block"><a href="/"><img src="../Images/review.png" alt=""/></a></div>
                 <div className="between col-lg-6 col-ld-12">
                   <form action="" method="POST">
                     <input type="text" placeholder="Search our catalog"/>
@@ -168,7 +140,7 @@ var cart_mobile = document.getElementById('a14235');
                   </div>
                     <ul className="register hidden login674">
                       <Link to='/login'><li>SingIn</li></Link>
-                      <a href="end"><li>Register</li></a>
+                      <Link to='/register'><li>Register</li></Link>
                     </ul>
                 </div>
               </div>
@@ -186,10 +158,7 @@ var cart_mobile = document.getElementById('a14235');
                       <a href="end"><li>Herbs</li></a>
                       <a href="end"><li>Cola cola</li></a>
                       <a href="end"><li>Mustard Oils</li></a>
-                      <a href="end"><li>Beverages</li></a>
-                      <a href="end"><li>Seeds & Nuts</li></a>
-                      <a href="end"><li>Toned Milk</li></a>
-                      <a href="end"><li>Cheese</li></a>
+                   
                     </ul>
                   </div>
                 {/*  <!-- hover for frozen item -->*/}
