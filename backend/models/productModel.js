@@ -60,6 +60,21 @@ const productSchema = mongoose.Schema(
       required: true,
       default: 0,
     },
+    finalPrice: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    savePrice: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    discountPercentage:{
+      type:Number,
+      required:true,
+      default:0,
+    },
     countInStock: {
       type: Number,
       required: true,

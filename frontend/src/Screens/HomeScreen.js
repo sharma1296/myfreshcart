@@ -36,13 +36,14 @@ const HomeScreen = ({ match }) => {
        
        <Meta />
       {!keyword ? (
-        <ProductCarousel />
+      <HomeCarousel/>
       ) : (
         <Link to='/' className='btn btn-light'>
           Go Back
         </Link>
       )}
-  <HomeCarousel/>
+<ProductCarousel/>
+
    <div class="img-banner">
           <div class="wrap-img">
             <a href='end'><img src="../Images/two-banner-1.jpg" alt=""/></a>
@@ -53,7 +54,17 @@ const HomeScreen = ({ match }) => {
             <div class="effect"></div>
           </div>
         </div>
-    
+
+        <div className='container'>
+        <Row>
+          <div className='delivery-banner col-12'>
+            <div>
+            <img src='../Images/free-delivery.jpg' alt='free-delivery'/>
+            </div>
+          </div>
+        </Row>
+        
+            
       <h1>Latest Products</h1>
       {loading ? (
         <Loader />
@@ -73,10 +84,10 @@ const HomeScreen = ({ match }) => {
             page={page}
             keyword={keyword ? keyword : ''}
           />
-      
-        </>
+      </>
       )}
-    </>
+      </div>
+      </>
   )
 }
 
