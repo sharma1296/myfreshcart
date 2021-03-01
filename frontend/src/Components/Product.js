@@ -8,7 +8,7 @@ const Product = ({ product }) => {
     <div className="product-container mx-3">
     <div className="pro_items">
         <span className="dis_section">
-        <span>8<span className="per_txt">%</span></span>
+        <span>{product.discountPercentage}<span className="per_txt">%</span></span>
         <br/>
             off
         </span>
